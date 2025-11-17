@@ -51,6 +51,47 @@ export default function EmulatorProPage() {
 
   return (
     <main className="min-h-screen bg-dark-950">
+      {/* Emulators - RENDERED FIRST FOR HIGHEST Z-INDEX */}
+      {selectedApp === 'ubereats' && (
+        <iPhone16ProEmulator
+          appName="🍔 Uber Eats"
+          isOpen={selectedApp === 'ubereats'}
+          onClose={() => setSelectedApp(null)}
+        >
+          <UberEatsProApp />
+        </iPhone16ProEmulator>
+      )}
+
+      {selectedApp === 'invoice' && (
+        <iPhone16ProEmulator
+          appName="📊 Invoicing"
+          isOpen={selectedApp === 'invoice'}
+          onClose={() => setSelectedApp(null)}
+        >
+          <InvoiceProApp />
+        </iPhone16ProEmulator>
+      )}
+
+      {selectedApp === 'social' && (
+        <iPhone16ProEmulator
+          appName="👥 Instagram"
+          isOpen={selectedApp === 'social'}
+          onClose={() => setSelectedApp(null)}
+        >
+          <SocialProApp />
+        </iPhone16ProEmulator>
+      )}
+
+      {selectedApp === 'ecommerce' && (
+        <iPhone16ProEmulator
+          appName="🛍️ ShopHub"
+          isOpen={selectedApp === 'ecommerce'}
+          onClose={() => setSelectedApp(null)}
+        >
+          <EcommerceProApp />
+        </iPhone16ProEmulator>
+      )}
+
       <Navigation />
 
       {/* Hero Section */}
@@ -189,47 +230,6 @@ export default function EmulatorProPage() {
 
       {/* Footer */}
       <Footer />
-
-      {/* Emulators */}
-      {selectedApp === 'ubereats' && (
-        <iPhone16ProEmulator
-          appName="🍔 Uber Eats"
-          isOpen={selectedApp === 'ubereats'}
-          onClose={() => setSelectedApp(null)}
-        >
-          <UberEatsProApp />
-        </iPhone16ProEmulator>
-      )}
-
-      {selectedApp === 'invoice' && (
-        <iPhone16ProEmulator
-          appName="📊 Invoicing"
-          isOpen={selectedApp === 'invoice'}
-          onClose={() => setSelectedApp(null)}
-        >
-          <InvoiceProApp />
-        </iPhone16ProEmulator>
-      )}
-
-      {selectedApp === 'social' && (
-        <iPhone16ProEmulator
-          appName="👥 Instagram"
-          isOpen={selectedApp === 'social'}
-          onClose={() => setSelectedApp(null)}
-        >
-          <SocialProApp />
-        </iPhone16ProEmulator>
-      )}
-
-      {selectedApp === 'ecommerce' && (
-        <iPhone16ProEmulator
-          appName="🛍️ ShopHub"
-          isOpen={selectedApp === 'ecommerce'}
-          onClose={() => setSelectedApp(null)}
-        >
-          <EcommerceProApp />
-        </iPhone16ProEmulator>
-      )}
     </main>
   )
 }
