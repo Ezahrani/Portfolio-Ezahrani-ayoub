@@ -133,12 +133,12 @@ export default function ProjectsPage() {
             className="text-center space-y-4"
           >
             <a
-              href="/emulator"
+              href="/emulator-pro"
               className="inline-block px-8 py-4 bg-accent text-dark-950 font-bold rounded-lg hover:bg-accent/80 transition-all hover:shadow-lg hover:shadow-accent/50"
             >
-              🎮 Essayer l'émulateur mobile interactif →
+              📱 Test Professional Apps in iPhone 16 Pro Emulator →
             </a>
-            <p className="text-gray-400 text-sm">Testez les applications complètes dans un vrai émulateur mobile</p>
+            <p className="text-gray-400 text-sm">Experience 4 professional applications with realistic iPhone 16 Pro design</p>
           </motion.div>
         </div>
       </section>
