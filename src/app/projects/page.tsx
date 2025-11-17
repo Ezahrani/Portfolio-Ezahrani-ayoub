@@ -124,20 +124,21 @@ export default function ProjectsPage() {
             ))}
           </div>
 
-          {/* CTA to Apps Page */}
+          {/* CTA to Emulator Page */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center"
+            className="text-center space-y-4"
           >
             <a
-              href="/apps"
+              href="/emulator"
               className="inline-block px-8 py-4 bg-accent text-dark-950 font-bold rounded-lg hover:bg-accent/80 transition-all hover:shadow-lg hover:shadow-accent/50"
             >
-              Voir toutes les applications interactives →
+              🎮 Essayer l'émulateur mobile interactif →
             </a>
+            <p className="text-gray-400 text-sm">Testez les applications complètes dans un vrai émulateur mobile</p>
           </motion.div>
         </div>
       </section>
