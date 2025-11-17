@@ -81,15 +81,13 @@ export default function iPhone16ProEmulator({
           </div>
 
           {/* App Content - Scrollable */}
-          <div className="flex-1 bg-white overflow-hidden overflow-y-auto overflow-x-hidden scroll-smooth"
+          <div className="flex-1 bg-white overflow-hidden overflow-y-auto overflow-x-hidden scroll-smooth w-full"
             style={{
               scrollBehavior: 'smooth',
               WebkitOverflowScrolling: 'touch',
             }}
           >
-            <div className="w-full h-full">
-              {children}
-            </div>
+            {children}
           </div>
 
           {/* Home Indicator */}
