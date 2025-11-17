@@ -91,7 +91,7 @@ export default function UberEatsProApp() {
   const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0)
 
   return (
-    <div className="w-full h-full bg-white">
+    <div className="w-full h-full bg-white flex flex-col">
       <AnimatePresence mode="wait">
         {/* Home Page */}
         {currentPage === 'home' && (
@@ -100,7 +100,7 @@ export default function UberEatsProApp() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="w-full h-full overflow-y-auto pb-24"
+            className="flex-1 overflow-y-auto"
           >
             {/* Header */}
             <div className="bg-white sticky top-0 z-20 pt-4 px-4 pb-3">
@@ -195,7 +195,7 @@ export default function UberEatsProApp() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="w-full h-full overflow-y-auto pb-24"
+            className="flex-1 overflow-y-auto"
           >
             {/* Restaurant Header */}
             <div className={`bg-gradient-to-br ${selectedRestaurant.color} h-40 flex items-end justify-between p-4 text-white relative`}>
@@ -246,7 +246,7 @@ export default function UberEatsProApp() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="w-full h-full overflow-y-auto pb-24"
+            className="flex-1 overflow-y-auto"
           >
             <div className="bg-white sticky top-0 z-10 p-4 border-b border-gray-200">
               <h2 className="text-2xl font-bold text-black">Your Cart</h2>
@@ -325,11 +325,11 @@ export default function UberEatsProApp() {
         )}
       </AnimatePresence>
 
-      {/* Bottom Navigation */}
+      {/* Bottom Navigation - INSIDE EMULATOR */}
       <motion.div
         initial={{ y: 100 }}
         animate={{ y: 0 }}
-        className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 flex justify-around items-center py-3"
+        className="bg-white border-t border-gray-200 flex justify-around items-center py-3"
       >
         <button
           onClick={() => setCurrentPage('home')}

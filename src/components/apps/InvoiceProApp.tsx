@@ -52,7 +52,7 @@ export default function InvoiceProApp() {
   }
 
   return (
-    <div className="w-full h-full bg-gray-50">
+    <div className="w-full h-full bg-gray-50 flex flex-col">
       <AnimatePresence mode="wait">
         {/* Dashboard */}
         {currentPage === 'dashboard' && (
@@ -61,7 +61,7 @@ export default function InvoiceProApp() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="w-full h-full overflow-y-auto pb-24"
+            className="flex-1 overflow-y-auto"
           >
             {/* Header */}
             <div className="bg-white border-b border-gray-200 sticky top-0 z-10 p-4">
@@ -180,7 +180,7 @@ export default function InvoiceProApp() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="w-full h-full overflow-y-auto pb-24"
+            className="flex-1 overflow-y-auto"
           >
             <div className="bg-white border-b border-gray-200 sticky top-0 z-10 p-4 flex items-center gap-3">
               <button
@@ -266,11 +266,11 @@ export default function InvoiceProApp() {
         )}
       </AnimatePresence>
 
-      {/* Bottom Navigation */}
+      {/* Bottom Navigation - INSIDE EMULATOR */}
       <motion.div
         initial={{ y: 100 }}
         animate={{ y: 0 }}
-        className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 flex justify-around items-center py-3"
+        className="bg-white border-t border-gray-200 flex justify-around items-center py-3"
       >
         <button
           onClick={() => setCurrentPage('dashboard')}

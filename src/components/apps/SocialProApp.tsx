@@ -83,7 +83,7 @@ export default function SocialProApp() {
   }
 
   return (
-    <div className="w-full h-full bg-white">
+    <div className="w-full h-full bg-white flex flex-col">
       <AnimatePresence mode="wait">
         {/* Feed Page */}
         {currentPage === 'feed' && (
@@ -92,7 +92,7 @@ export default function SocialProApp() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="w-full h-full overflow-y-auto pb-24"
+            className="flex-1 overflow-y-auto"
           >
             {/* Header */}
             <div className="bg-white border-b border-gray-200 sticky top-0 z-10 p-4">
@@ -215,7 +215,7 @@ export default function SocialProApp() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="w-full h-full overflow-y-auto pb-24"
+            className="flex-1 overflow-y-auto"
           >
             <div className="bg-white border-b border-gray-200 sticky top-0 z-10 p-4">
               <div className="relative">
@@ -251,7 +251,7 @@ export default function SocialProApp() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="w-full h-full overflow-y-auto pb-24"
+            className="flex-1 overflow-y-auto"
           >
             <div className="bg-white border-b border-gray-200 sticky top-0 z-10 p-4">
               <h2 className="text-2xl font-bold text-black">Messages</h2>
@@ -339,7 +339,7 @@ export default function SocialProApp() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="w-full h-full overflow-y-auto pb-24"
+            className="flex-1 overflow-y-auto"
           >
             <div className="bg-white border-b border-gray-200 p-6 text-center">
               <div className="text-6xl mb-3">👤</div>
@@ -375,11 +375,11 @@ export default function SocialProApp() {
         )}
       </AnimatePresence>
 
-      {/* Bottom Navigation */}
+      {/* Bottom Navigation - INSIDE EMULATOR */}
       <motion.div
         initial={{ y: 100 }}
         animate={{ y: 0 }}
-        className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 flex justify-around items-center py-3"
+        className="bg-white border-t border-gray-200 flex justify-around items-center py-3"
       >
         <button
           onClick={() => setCurrentPage('feed')}
