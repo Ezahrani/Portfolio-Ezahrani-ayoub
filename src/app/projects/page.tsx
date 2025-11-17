@@ -90,85 +90,55 @@ export default function ProjectsPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-3xl font-bold text-white mb-4">
               Applications <span className="text-accent">Mobiles</span>
             </h2>
-            <p className="text-gray-400 text-lg">
-              Explorez les applications mobiles interactives que j'ai développées
+            <p className="text-gray-400">
+              Découvrez mes applications mobiles complètes et fonctionnelles avec des démos interactives dans un émulateur.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* App 1: UberEats */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <h3 className="text-2xl font-bold text-white mb-4">🍔 Livraison de Nourriture</h3>
-              <p className="text-gray-400 mb-6">
-                Application complète de livraison avec géolocalisation, paiement et suivi en temps réel
-              </p>
-              <button className="px-6 py-2 bg-accent/10 border border-accent/30 text-accent rounded hover:bg-accent/20 transition-all">
-                Voir la démo
-              </button>
-            </motion.div>
-
-            {/* App 2: Invoice */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <h3 className="text-2xl font-bold text-white mb-4">📊 Facturation & Gestion</h3>
-              <p className="text-gray-400 mb-6">
-                Plateforme de gestion pour freelancers et artisans avec génération de factures
-              </p>
-              <button className="px-6 py-2 bg-accent/10 border border-accent/30 text-accent rounded hover:bg-accent/20 transition-all">
-                Voir la démo
-              </button>
-            </motion.div>
-
-            {/* App 3: Social */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <h3 className="text-2xl font-bold text-white mb-4">📱 Réseau Social</h3>
-              <p className="text-gray-400 mb-6">
-                Mini réseau social avec partage de photos, vidéos et chat en temps réel
-              </p>
-              <button className="px-6 py-2 bg-accent/10 border border-accent/30 text-accent rounded hover:bg-accent/20 transition-all">
-                Voir la démo
-              </button>
-            </motion.div>
-
-            {/* App 4: E-Commerce */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <h3 className="text-2xl font-bold text-white mb-4">🛍️ E-Commerce</h3>
-              <p className="text-gray-400 mb-6">
-                Plateforme e-commerce complète avec catalogue, panier et système de paiement
-              </p>
-              <button className="px-6 py-2 bg-accent/10 border border-accent/30 text-accent rounded hover:bg-accent/20 transition-all">
-                Voir la démo
-              </button>
-            </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            {[
+              { title: '🍔 UberEats Clone', desc: 'Application de livraison avec recherche, panier et suivi' },
+              { title: '📊 Facturation', desc: 'Plateforme SaaS pour gérer les factures et revenus' },
+              { title: '👥 Réseau Social', desc: 'Mini réseau social avec feed, messages et tendances' },
+              { title: '🛍️ E-Commerce', desc: 'Plateforme de shopping avec catalogue et panier' },
+            ].map((app, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-dark-800 rounded-lg p-6 border border-accent/20 hover:border-accent/50 transition-all"
+              >
+                <h3 className="text-xl font-bold text-white mb-2">{app.title}</h3>
+                <p className="text-gray-400 mb-4">{app.desc}</p>
+                <button className="px-6 py-2 bg-accent/10 border border-accent/30 text-accent rounded hover:bg-accent/20 transition-all">
+                  Voir la démo
+                </button>
+              </motion.div>
+            ))}
           </div>
+
+          {/* CTA to Apps Page */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <a
+              href="/apps"
+              className="inline-block px-8 py-4 bg-accent text-dark-950 font-bold rounded-lg hover:bg-accent/80 transition-all hover:shadow-lg hover:shadow-accent/50"
+            >
+              Voir toutes les applications interactives →
+            </a>
+          </motion.div>
         </div>
       </section>
 

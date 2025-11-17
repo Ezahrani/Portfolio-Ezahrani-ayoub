@@ -1,6 +1,6 @@
-# Portfolio Interactif - Développeur Web & Mobile
+# 📚 Portfolio Interactif – Développeur Web & Mobile
 
-Un portfolio moderne, immersif et entièrement responsive conçu pour présenter de manière élégante et interactive votre parcours, vos compétences et vos projets développés en Web, Mobile et Unity.
+Portfolio premium interactif avec design dark mode, animations fluides, responsive design et **4 applications mobiles complètes et fonctionnelles avec émulateur interactif**. Conçu pour présenter de manière élégante et interactive votre parcours, vos compétences et vos projets développés en Web, Mobile et Unity.
 
 ## 🎨 Caractéristiques
 
