@@ -11,7 +11,7 @@ const videoDemos = [
     title: 'PROJECT #1 — Match&Move',
     description:
       'Flutter Mobile Developer — Development of Match&Move, a sports & e-sports matchmaking application featuring modern interfaces, smart matchmaking, geolocation, and real-time chat.',
-    videoUrl: '/videos/demo1.mov',
+    videoUrl: '/demo1.mp4',
     technologies: [
       'Flutter',
       'Dart',
@@ -31,7 +31,7 @@ const videoDemos = [
     title: 'PROJECT #2 — EASYFLIGHT',
     description:
       'Full-Stack & Mobile Developer — Complete development of the EASYFLIGHT website and mobile application: search engine, flight booking system, secure payments, and an admin dashboard.',
-    videoUrl: '/videos/demo2.mov',
+    videoUrl: '/demo2.mp4',
     technologies: [
       'Flutter (mobile & web)',
       'Dart',
@@ -50,7 +50,7 @@ const videoDemos = [
     title: 'PROJECT #3 — LUXESHOP',
     description:
       'Mobile Developer (E-commerce) — Development of LUXESHOP, a premium e-commerce mobile application including product catalog, filters, favorites, and integrated payments with optimized mobile UI.',
-    videoUrl: '/videos/demo3.mov',
+    videoUrl: '/demo3.mp4',
     technologies: [
       'React Native',
       'TypeScript',
