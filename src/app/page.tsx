@@ -9,10 +9,10 @@ import { motion } from 'framer-motion'
 const experiences = [
   {
     company: 'Match&Move',
-    role: 'Développeur Mobile Cross-Platform (Flutter)',
-    period: 'Août 2024 — Présent',
+    role: 'Cross-Platform Mobile Developer (Flutter)',
+    period: 'August 2024 — Present',
     description:
-      "Développeur mobile spécialisé Flutter, responsable du développement d’applications Android & iOS modernes et performantes.",
+      'Mobile developer specialized in Flutter, responsible for developing modern and high-performance Android & iOS applications.',
     technologies: [
       'Flutter',
       'Dart',
@@ -30,18 +30,18 @@ const experiences = [
       'Clean Architecture',
     ],
     achievements: [
-      'Lead dev sur Match&Move : matchmaking sportif, chat temps réel, événements, filtres avancés, profils sportifs et géolocalisation.',
-      'Optimisation UI/UX avec animations Flutter et design responsive.',
-      'Intégration des notifications push et d’un système d’authentification sécurisée.',
-      '5 projets mobiles livrés en équipe.',
+      'Lead developer on Match&Move: sports matchmaking, real-time chat, events, advanced filters, athlete profiles, and geolocation.',
+      'UI/UX optimization with Flutter animations and responsive design.',
+      'Integration of push notifications and a secure authentication system.',
+      'Delivered five mobile projects as part of a squad.',
     ],
   },
   {
     company: 'EASYFLIGHT',
-    role: 'Développeur Full-Stack & Mobile (Flutter/Dart)',
-    period: 'Septembre 2023 — Juin 2024',
+    role: 'Full-Stack & Mobile Developer (Flutter/Dart)',
+    period: 'September 2023 — June 2024',
     description:
-      "Développeur full-stack et mobile en charge d’une plateforme complète de réservation de vols (site web + application mobile).",
+      'Full-stack and mobile developer in charge of a complete flight booking platform (website and mobile app).',
     technologies: [
       'Flutter',
       'Dart',
@@ -62,19 +62,19 @@ const experiences = [
       'Figma',
     ],
     achievements: [
-      "Développement de l’app mobile EASYFLIGHT (recherche de vols, réservation, billets, paiements, notifications push).",
-      'Création du site Flutter Web : interface responsive, tableau de bord admin, moteur de recherche performant.',
-      'Intégration d’API aériennes et déploiement d’un système de paiement sécurisé.',
-      'Participation à l’architecture serveur : endpoints REST, sécurité, optimisation.',
-      '18 projets livrés (mobile, web, back-end, API).',
+      'Developed the EASYFLIGHT mobile app (flight search, booking, tickets, payments, push notifications).',
+      'Created the Flutter Web platform: responsive interface, admin dashboard, and high-performance search engine.',
+      'Integrated airline APIs and deployed a secure payment system.',
+      'Contributed to server architecture: REST endpoints, security, and optimization.',
+      'Delivered 18 projects (mobile, web, backend, APIs).',
     ],
   },
   {
     company: 'LUXESHOP',
-    role: 'Développeur Application Mobile',
-    period: 'Septembre 2022 — Août 2023',
+    role: 'Mobile Application Developer',
+    period: 'September 2022 — August 2023',
     description:
-      "Développeur mobile en charge de la création de LUXESHOP, application e-commerce premium avec catalogue dynamique et paiement sécurisé.",
+      'Mobile developer responsible for creating LUXESHOP, a premium e-commerce application with a dynamic catalog and secure payments.',
     technologies: [
       'React Native (TypeScript/JavaScript)',
       'Redux Toolkit',
@@ -82,41 +82,41 @@ const experiences = [
       'REST API',
       'Firebase (Auth, Firestore)',
       'Git/GitHub',
-      'UI Responsive & animations',
+      'Responsive UI & animations',
     ],
     achievements: [
-      "Développement complet de l’application mobile LUXESHOP (Android & iOS).",
-      'Intégration d’un système de paiement Stripe sécurisé.',
-      'Mise en place du catalogue produits, filtres, recherche avancée et favoris.',
-      'Optimisation des performances et de l’expérience utilisateur.',
-      'Création d’une interface moderne et minimaliste adaptée au haut de gamme.',
-      'Livraison du projet avec maintenance et optimisation continue.',
+      'Fully developed the LUXESHOP mobile app for Android and iOS.',
+      'Integrated a secure Stripe payment system.',
+      'Implemented product catalog, filters, advanced search, and favorites.',
+      'Optimized performance and user experience.',
+      'Designed a modern, minimalist interface for premium retail.',
+      'Delivered the project with continuous maintenance and optimization.',
     ],
   },
   {
     company: 'Unity & C# Freelance',
-    role: 'Développeur Jeux Vidéo 2D / 3D',
-    period: 'Janvier 2019 — Août 2022',
+    role: '2D/3D Video Game Developer',
+    period: 'January 2019 — August 2022',
     description:
-      'Développeur jeux vidéo freelance spécialisé dans la création de jeux 2D et 3D avec Unity, de la conception à la publication multi-plateformes.',
+      'Freelance game developer specializing in 2D and 3D games with Unity, from concept to multi-platform publishing.',
     technologies: [
       'Unity Engine (2019–2022)',
-      'C# (Architecture, Gameplay, IA, Systèmes)',
+      'C# (Architecture, Gameplay, AI, Systems)',
       'Blender',
       'Photoshop',
       'Illustrator',
       'Git/GitHub',
       'Unity Asset Store',
-      'UI/UX Unity Canvas',
+      'Unity UI/UX',
       'Animations',
       'VFX',
     ],
     achievements: [
-      'Création de plus de 14 jeux vidéo : runners, puzzles, RPG légers, jeux de tir 3D, plateformes 2D.',
-      'Développement de systèmes complets : contrôles joueur, IA ennemies, gestion des niveaux, inventaires, scoring, menus et HUD.',
-      'Optimisation des performances pour Android/iOS et publication en white label.',
-      'Collaboration avec artistes 2D/3D pour intégrer assets, animations et effets.',
-      'Livraison de projets complets avec documentation technique et maintenance.',
+      'Created more than 14 video games: runners, puzzles, casual RPGs, 3D shooters, and 2D platformers.',
+      'Developed complete systems: player controls, enemy AI, level management, inventories, scoring, menus, and HUD.',
+      'Optimized performance for Android/iOS and published white-label releases.',
+      'Collaborated with 2D/3D artists to integrate assets, animations, and visual effects.',
+      'Delivered full projects with technical documentation and post-launch support.',
     ],
   },
 ]
@@ -139,10 +139,10 @@ export default function Home() {
           className="mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Mes <span className="text-accent">Expériences</span>
+            My <span className="text-accent">Experience</span>
           </h2>
           <p className="text-gray-400 text-lg">
-            Parcours professionnel et expertise développée au fil des années
+            Professional journey and expertise developed over the years
           </p>
         </motion.div>
 
@@ -164,14 +164,14 @@ export default function Home() {
             className="mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Mes <span className="text-accent">Compétences</span>
+              My <span className="text-accent">Skills</span>
             </h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                category: 'Développement Mobile',
+                category: 'Mobile Development',
                 skills: [
                   'Flutter',
                   'Dart',
@@ -183,30 +183,30 @@ export default function Home() {
                 ],
               },
               {
-                category: 'Développement Web',
-                skills: ['Flutter Web', 'HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Intégration API web'],
+                category: 'Web Development',
+                skills: ['Flutter Web', 'HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Web API integration'],
               },
               {
-                category: 'Back-end & API',
+                category: 'Back-End & API Development',
                 skills: [
                   'Node.js',
                   'Express.js',
                   'Firebase Cloud Functions',
                   'REST API',
-                  'OAuth2 / Auth sécurisé',
+                  'OAuth2 / Secure Authentication',
                   'PHP / Laravel (EASYFLIGHT)',
                 ],
               },
               {
-                category: 'Bases de Données',
-                skills: ['Firebase Firestore', 'Realtime Database', 'MySQL', 'PostgreSQL'],
+                category: 'Databases',
+                skills: ['Firebase Firestore', 'Firebase Realtime Database', 'MySQL', 'PostgreSQL'],
               },
               {
-                category: 'Paiement & Sécurité',
-                skills: ['Stripe API', 'Sécurité des paiements', 'Tokenization / Auth sécurisée'],
+                category: 'Payments & Security',
+                skills: ['Stripe API', 'Payment security', 'Tokenization / Secure authentication'],
               },
               {
-                category: 'Outils & Environnements',
+                category: 'Tools & Environments',
                 skills: [
                   'Git / GitHub',
                   'Docker',
@@ -218,29 +218,29 @@ export default function Home() {
                 ],
               },
               {
-                category: 'Architectures & Gestion d’État',
+                category: 'Architectures & State Management',
                 skills: ['Provider', 'Riverpod', 'Bloc', 'MVC', 'MVVM', 'Clean Architecture'],
               },
               {
-                category: 'Fonctionnalités avancées',
+                category: 'Advanced Features',
                 skills: [
-                  'Chat en temps réel',
-                  'Géolocalisation',
-                  'Push Notifications',
-                  'Matching / Recommandations',
-                  'Systèmes de recherche dynamiques',
-                  'Filtres avancés',
-                  'Gestion d’événements',
-                  'Systèmes de réservation',
+                  'Real-time chat',
+                  'Geolocation',
+                  'Push notifications',
+                  'Matching & recommendation systems',
+                  'Dynamic search systems',
+                  'Advanced filtering',
+                  'Event management',
+                  'Booking / reservation systems',
                 ],
               },
               {
-                category: 'UI/UX Mobile',
+                category: 'Mobile UI/UX',
                 skills: [
-                  'Design mobile moderne',
-                  'Conception d’interfaces Flutter',
+                  'Modern mobile design',
+                  'Flutter interface design',
                   'Animations & transitions',
-                  'UX orienté performance et fluidité',
+                  'Performance-oriented UX',
                 ],
               },
             ].map((skillGroup, index) => (
@@ -279,13 +279,13 @@ export default function Home() {
           className="max-w-4xl mx-auto text-center"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Prêt à <span className="text-accent">collaborer</span> ?
+            Ready to <span className="text-accent">Collaborate</span>?
           </h2>
           <p className="text-gray-400 text-lg mb-8">
-            Que vous ayez un projet en tête ou que vous cherchiez un développeur talentueux, je serais ravi de discuter avec vous.
+            Whether you have a project in mind or are looking for a talented developer, I would be happy to discuss it with you.
           </p>
           <button className="px-8 py-4 bg-accent text-dark-950 font-bold rounded-lg hover:bg-accent/80 transition-all duration-300 hover:shadow-lg hover:shadow-accent/50">
-            Me contacter
+            Contact Me
           </button>
         </motion.div>
       </section>

@@ -15,7 +15,7 @@ export default function Footer() {
             className="space-y-2"
           >
             <h3 className="text-2xl font-bold text-accent">CodeFin</h3>
-            <p className="text-gray-400">Solutions web & mobiles sur-mesure depuis Colombes, Île-de-France.</p>
+            <p className="text-gray-400">Custom web & mobile solutions from Colombes, Île-de-France.</p>
           </motion.div>
 
           <motion.div
@@ -53,7 +53,7 @@ export default function Footer() {
           viewport={{ once: true }}
           className="pt-8 mt-8 border-t border-accent/10 text-center text-gray-500"
         >
-          <p>© 2024 CodeFin. Tous droits réservés.</p>
+          <p>© 2024 CodeFin. All rights reserved.</p>
         </motion.div>
       </div>
     </footer>

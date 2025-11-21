@@ -9,8 +9,8 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    { label: 'Accueil', href: '/' },
-    { label: 'Projets', href: '/projects' },
+    { label: 'Home', href: '/' },
+    { label: 'Projects', href: '/projects' },
     { label: 'Contact', href: '/contact' },
   ]
 
@@ -24,8 +24,8 @@ export default function Navigation() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Link href="/" className="text-2xl font-bold text-accent">
-              {'<Dev />'}
+            <Link href="/" className="text-2xl font-bold tracking-tight text-accent">
+              CodeFin
             </Link>
           </motion.div>
 

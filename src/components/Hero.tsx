@@ -40,17 +40,28 @@ export default function Hero() {
           variants={itemVariants}
           className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
         >
-          <span className="text-white">Développeur </span>
-          <span className="text-accent">Web & Mobile</span>
+          <span className="text-white">Full-Stack & Mobile </span>
+          <span className="text-accent">Developer</span>
         </motion.h1>
 
         {/* Subtitle */}
-        <motion.p
+        <motion.div
           variants={itemVariants}
-          className="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl mx-auto"
+          className="font-mono text-base md:text-lg text-gray-300 mb-8 w-full max-w-4xl mx-auto space-y-4 leading-relaxed text-left"
         >
-          Créateur d'expériences numériques immersives avec React, Next.js, Unity et bien plus.
-        </motion.p>
+          <p>
+            I am a versatile developer specialized in mobile applications, web platforms, and complete back-end systems.
+          </p>
+          <p>
+            With over 5 years of experience, I have built and delivered high-quality products across sports, e-commerce, aviation,
+            gaming, and digital services.
+          </p>
+          <p>
+            I handle the entire development cycle—requirements analysis, architecture and system design, mobile development (Flutter,
+            React Native), web & API development (Node.js, Laravel, Firebase), third-party integrations, UI/UX optimization, and
+            long-term maintenance.
+          </p>
+        </motion.div>
 
         {/* CTA Buttons */}
         <motion.div
