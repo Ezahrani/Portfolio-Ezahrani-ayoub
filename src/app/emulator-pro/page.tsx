@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
-import iPhone16ProEmulator from '@/components/iPhone16ProEmulator'
+import IPhone16ProEmulator from '@/components/iPhone16ProEmulator'
 import UberEatsProApp from '@/components/apps/UberEatsProApp'
 import InvoiceProApp from '@/components/apps/InvoiceProApp'
 import SocialProApp from '@/components/apps/SocialProApp'
@@ -53,43 +53,43 @@ export default function EmulatorProPage() {
     <main className="min-h-screen bg-dark-950">
       {/* Emulators - RENDERED FIRST FOR HIGHEST Z-INDEX */}
       {selectedApp === 'ubereats' && (
-        <iPhone16ProEmulator
+        <IPhone16ProEmulator
           appName="🍔 Uber Eats"
           isOpen={selectedApp === 'ubereats'}
           onClose={() => setSelectedApp(null)}
         >
           <UberEatsProApp />
-        </iPhone16ProEmulator>
+        </IPhone16ProEmulator>
       )}
 
       {selectedApp === 'invoice' && (
-        <iPhone16ProEmulator
+        <IPhone16ProEmulator
           appName="📊 Invoicing"
           isOpen={selectedApp === 'invoice'}
           onClose={() => setSelectedApp(null)}
         >
           <InvoiceProApp />
-        </iPhone16ProEmulator>
+        </IPhone16ProEmulator>
       )}
 
       {selectedApp === 'social' && (
-        <iPhone16ProEmulator
+        <IPhone16ProEmulator
           appName="👥 Instagram"
           isOpen={selectedApp === 'social'}
           onClose={() => setSelectedApp(null)}
         >
           <SocialProApp />
-        </iPhone16ProEmulator>
+        </IPhone16ProEmulator>
       )}
 
       {selectedApp === 'ecommerce' && (
-        <iPhone16ProEmulator
+        <IPhone16ProEmulator
           appName="🛍️ ShopHub"
           isOpen={selectedApp === 'ecommerce'}
           onClose={() => setSelectedApp(null)}
         >
           <EcommerceProApp />
-        </iPhone16ProEmulator>
+        </IPhone16ProEmulator>
       )}
 
       <Navigation />
