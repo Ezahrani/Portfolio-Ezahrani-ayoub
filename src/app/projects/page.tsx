@@ -8,9 +8,9 @@ import { motion } from 'framer-motion'
 const videoDemos = [
   {
     id: 'demo1',
-    title: 'Match&Move — Développeur Mobile Flutter',
+    title: 'PROJECT #1 — Match&Move',
     description:
-      'Développement de Match&Move, app de rencontre sportive & e-sportive : interfaces, matchmaking, géolocalisation et chat temps réel.',
+      'Flutter Mobile Developer — Development of Match&Move, a sports & e-sports matchmaking application featuring modern interfaces, smart matchmaking, geolocation, and real-time chat.',
     videoUrl: '/videos/demo1.mov',
     technologies: [
       'Flutter',
@@ -28,9 +28,9 @@ const videoDemos = [
   },
   {
     id: 'demo2',
-    title: 'EASYFLIGHT — Développeur Full-Stack & Mobile',
+    title: 'PROJECT #2 — EASYFLIGHT',
     description:
-      'Site web + app mobile EASYFLIGHT : moteur de recherche, réservations, paiements sécurisés et dashboard administrateur.',
+      'Full-Stack & Mobile Developer — Complete development of the EASYFLIGHT website and mobile application: search engine, flight booking system, secure payments, and an admin dashboard.',
     videoUrl: '/videos/demo2.mov',
     technologies: [
       'Flutter (mobile & web)',
@@ -47,9 +47,9 @@ const videoDemos = [
   },
   {
     id: 'demo3',
-    title: 'LUXESHOP — Développeur Mobile (E-commerce)',
+    title: 'PROJECT #3 — LUXESHOP',
     description:
-      'Application e-commerce LUXESHOP : catalogue produits, filtres, favoris et paiement intégré avec interface mobile optimisée.',
+      'Mobile Developer (E-commerce) — Development of LUXESHOP, a premium e-commerce mobile application including product catalog, filters, favorites, and integrated payments with optimized mobile UI.',
     videoUrl: '/videos/demo3.mov',
     technologies: [
       'React Native',
@@ -79,10 +79,10 @@ export default function ProjectsPage() {
             className="mb-12 text-center"
           >
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Projets <span className="text-accent">en vidéo</span>
+              🎥 Video <span className="text-accent">Projects</span>
             </h1>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Visualisez mes applications en action grâce à des walkthroughs complets enregistrés depuis l’iPhone 16 Pro.
+              Explore my applications in action through full walkthroughs recorded on an iPhone 16 Pro.
             </p>
           </motion.div>
 
