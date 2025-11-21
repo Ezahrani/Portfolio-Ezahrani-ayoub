@@ -59,7 +59,7 @@ export default function VideoCard({
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handlePlay}
-                  aria-label={`Regarder ${title}`}
+                  aria-label={`Watch ${title} demo`}
                   className="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-dark-950 shadow-lg hover:bg-accent/80"
                 >
                   <Play size={32} className="ml-1" fill="currentColor" />
@@ -112,10 +112,11 @@ export default function VideoCard({
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={handlePlay}
+            aria-label={`Watch ${title} demo`}
             className="inline-flex items-center justify-center gap-2 self-start rounded-lg border border-accent/40 bg-accent/10 px-5 py-2 text-sm font-medium text-accent transition-colors duration-200 hover:bg-accent/20"
           >
             <Play size={16} />
-            Regarder la démo
+            Watch the demo
           </motion.button>
         </div>
       </div>

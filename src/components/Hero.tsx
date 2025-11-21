@@ -69,10 +69,10 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
         >
           <button className="px-8 py-3 bg-accent text-dark-950 font-bold rounded-lg hover:bg-accent/80 transition-all duration-300 hover:shadow-lg hover:shadow-accent/50">
-            Voir mes projets
+            See My Projects
           </button>
           <button className="px-8 py-3 border-2 border-accent text-accent font-bold rounded-lg hover:bg-accent/10 transition-all duration-300">
-            Me contacter
+            Contact Me
           </button>
         </motion.div>
 

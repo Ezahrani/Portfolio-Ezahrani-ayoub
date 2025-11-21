@@ -84,7 +84,7 @@ export default function ContactPage() {
               type="submit"
               className="w-full px-8 py-3 bg-accent text-dark-950 font-bold rounded-lg hover:bg-accent/80 transition-all duration-300 hover:shadow-lg hover:shadow-accent/50"
             >
-              Envoyer le message
+              Send
             </motion.button>
           </motion.form>
         </div>
