@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://portfolio.example.com/sitemap.xml
+Sitemap: https://codefin.fr/sitemap.xml
 
 # Google
 User-agent: Googlebot

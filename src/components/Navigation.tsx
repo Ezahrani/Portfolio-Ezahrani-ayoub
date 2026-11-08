@@ -21,11 +21,11 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16 gap-4">
           <Link href="/" className="flex items-center gap-2.5 shrink-0">
             <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-accent to-coral grid place-items-center font-display font-extrabold text-white text-sm">
-              AE
+              CF
             </span>
             <span className="leading-tight">
-              <span className="block font-display font-bold text-white">Ayoub Ezahrani</span>
-              <span className="block text-[11px] text-gray-400">Contrôle de gestion · Automatisation IA</span>
+              <span className="block font-display font-bold text-white">CodeFin</span>
+              <span className="block text-[11px] text-gray-400">Ayoub Ezahrani · Contrôle de gestion & IA</span>
             </span>
           </Link>
 

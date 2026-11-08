@@ -275,13 +275,21 @@ export default function Home() {
             Envoyez-moi deux lignes sur votre contexte : taille, outils, échéance. Je vous réponds sous 24 h avec une
             proposition de cadrage et un prix.
           </p>
-          <div className="mt-10 grid sm:grid-cols-3 gap-4 text-left">
+          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
+            <a
+              href="mailto:contact@codefin.fr"
+              className="rounded-2xl border border-accent/60 bg-panel p-5 hover:border-accent"
+            >
+              <Mail className="text-accent" size={22} />
+              <p className="text-white font-semibold mt-3">Email CodeFin</p>
+              <p className="text-gray-400 text-sm break-all select-all">contact@codefin.fr</p>
+            </a>
             <a
               href="mailto:ezahraniayoub@gmail.com"
               className="rounded-2xl border border-line bg-panel p-5 hover:border-accent"
             >
               <Mail className="text-accent" size={22} />
-              <p className="text-white font-semibold mt-3">Email</p>
+              <p className="text-white font-semibold mt-3">Email direct</p>
               <p className="text-gray-400 text-sm break-all select-all">ezahraniayoub@gmail.com</p>
             </a>
             <a
