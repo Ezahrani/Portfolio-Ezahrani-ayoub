@@ -53,3 +53,36 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # Publication sur codefin.fr (hébergement OVH) : active dès que les 3 secrets OVH_FTP_* existent
+  ovh:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAGES: 'true'
+      NEXT_PUBLIC_BASE_PATH: ''
+      FTP_SERVER: ${{ secrets.OVH_FTP_SERVER }}
+      FTP_USERNAME: ${{ secrets.OVH_FTP_USERNAME }}
+      FTP_PASSWORD: ${{ secrets.OVH_FTP_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v4
+        if: env.FTP_PASSWORD != ''
+
+      - uses: actions/setup-node@v4
+        if: env.FTP_PASSWORD != ''
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Construire le site pour codefin.fr
+        if: env.FTP_PASSWORD != ''
+        run: npm ci && npm run build
+
+      - name: Envoyer le site dans le dossier www d'OVH
+        if: env.FTP_PASSWORD != ''
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ env.FTP_SERVER }}
+          username: ${{ env.FTP_USERNAME }}
+          password: ${{ env.FTP_PASSWORD }}
+          local-dir: ./out/
+          server-dir: ./www/
