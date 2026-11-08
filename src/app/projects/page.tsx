@@ -4,6 +4,7 @@ import Navigation from '@/components/Navigation'
 import VideoCard from '@/components/VideoCard'
 import Footer from '@/components/Footer'
 import { motion } from 'framer-motion'
+import { asset } from '@/lib/basePath'
 
 const videoDemos = [
   {
@@ -11,7 +12,7 @@ const videoDemos = [
     title: 'PROJECT #1 — Match&Move',
     description:
       'Flutter Mobile Developer — Development of Match&Move, a sports & e-sports matchmaking application featuring modern interfaces, smart matchmaking, geolocation, and real-time chat.',
-    videoUrl: '/demo1.mp4',
+    videoUrl: asset('/demo1.mp4'),
     technologies: [
       'Flutter',
       'Dart',
@@ -31,7 +32,7 @@ const videoDemos = [
     title: 'PROJECT #2 — EASYFLIGHT',
     description:
       'Full-Stack & Mobile Developer — Complete development of the EASYFLIGHT website and mobile application: search engine, flight booking system, secure payments, and an admin dashboard.',
-    videoUrl: '/demo2.mp4',
+    videoUrl: asset('/demo2.mp4'),
     technologies: [
       'Flutter (mobile & web)',
       'Dart',
@@ -50,7 +51,7 @@ const videoDemos = [
     title: 'PROJECT #3 — LUXESHOP',
     description:
       'Mobile Developer (E-commerce) — Development of LUXESHOP, a premium e-commerce mobile application including product catalog, filters, favorites, and integrated payments with optimized mobile UI.',
-    videoUrl: '/demo3.mp4',
+    videoUrl: asset('/demo3.mp4'),
     technologies: [
       'React Native',
       'TypeScript',

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Gallery from '@/components/Gallery'
@@ -254,12 +255,12 @@ export default function Home() {
               (Flutter, Firebase). C&apos;est ce qui me permet de construire moi-même vos automatisations et vos agents IA.
             </p>
           </div>
-          <a
+          <Link
             href="/projects"
             className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-line text-white font-semibold hover:border-mint whitespace-nowrap"
           >
             Projets mobiles <ArrowRight size={18} />
-          </a>
+          </Link>
         </div>
       </section>
 

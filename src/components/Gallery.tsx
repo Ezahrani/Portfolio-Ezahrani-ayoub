@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { X } from 'lucide-react'
+import { asset } from '@/lib/basePath'
 import { categories, realisations, type Category, type Realisation } from '@/lib/content'
 
 const categoryColor: Record<Category, string> = {
@@ -66,7 +67,7 @@ export default function Gallery() {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={`/portfolio/${r.slug}.webp`}
+                src={asset(`/portfolio/${r.slug}.webp`)}
                 alt={r.title}
                 loading="lazy"
                 className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
@@ -107,7 +108,7 @@ export default function Gallery() {
               <X size={16} /> Fermer
             </button>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={`/portfolio/${open.slug}.webp`} alt={open.title} className="w-full h-auto rounded-xl max-h-[80vh] object-contain" />
+            <img src={asset(`/portfolio/${open.slug}.webp`)} alt={open.title} className="w-full h-auto rounded-xl max-h-[80vh] object-contain" />
             <p className="mt-3 text-white font-semibold">{open.title}</p>
           </div>
         </div>
