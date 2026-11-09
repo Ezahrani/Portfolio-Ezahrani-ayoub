@@ -221,3 +221,94 @@ export const parcours = [
     text: 'Clôtures mensuelles, analyse des écarts réel / budget, suivi des CAPEX, des OPEX et des coûts de personnel.',
   },
 ]
+
+export interface Mission {
+  slug: string
+  client: string
+  sector: string
+  title: string
+  context: string
+  actions: string[]
+  result: string
+}
+
+export const missions: Mission[] = [
+  {
+    slug: 'mission-grdf',
+    client: 'GRDF',
+    sector: 'Énergie',
+    title: 'Pilotage data des Grands Comptes',
+    context: 'Appui aux Responsables Grands Comptes sur le suivi des consommations et la qualité des données clients.',
+    actions: [
+      'Tableaux de bord Power BI de suivi des consommations',
+      'Analyses SQL et plans de comptes',
+      'Enrichissement automatisé des comptes via les API Sirene',
+    ],
+    result: 'Plus de 600 comptes clients fiabilisés et enrichis automatiquement.',
+  },
+  {
+    slug: 'mission-snop',
+    client: 'SNOP, groupe FSD',
+    sector: 'Industrie automobile',
+    title: 'Référent Finance sur la migration SAP FI/CO',
+    context: 'Groupe industriel de 23 sites en migration de version SAP, avec un reporting groupe à maintenir.',
+    actions: [
+      'Recueil des besoins Finance et cahier de recette FI, CO et BW',
+      'Tests, suivi des anomalies et formation des utilisateurs',
+      'Reporting réel / budget, calculs de coûts et clôtures',
+    ],
+    result: 'Bascule SAP accompagnée côté Finance sur les 23 sites du groupe.',
+  },
+  {
+    slug: 'mission-caps-auto',
+    client: 'CAPS AUTO',
+    sector: 'Services automobile',
+    title: 'Budget, rentabilité client et tableaux de bord direction',
+    context: 'Direction qui voulait piloter son activité par client et par activité, avec un budget suivi chaque mois.',
+    actions: [
+      'Construction du budget et des reprévisions',
+      'Analyse mensuelle des écarts réel / budget',
+      'Rentabilité par activité et par client, tableaux de bord Power BI',
+    ],
+    result: 'Un pilotage mensuel partagé avec la direction, écarts expliqués et actions suivies.',
+  },
+  {
+    slug: 'mission-dealt',
+    client: 'Dealt',
+    sector: 'Services',
+    title: 'Reporting financier automatisé depuis SAP',
+    context: 'Reportings financiers produits à la main à partir d’exports SAP, avec des clôtures sous pression.',
+    actions: [
+      'Reportings Power BI alimentés directement depuis SAP',
+      'Participation aux clôtures mensuelles',
+      'Suivi du chiffre d’affaires et de la rentabilité',
+    ],
+    result: 'Des reportings qui se mettent à jour sans copier-coller.',
+  },
+  {
+    slug: 'mission-leoni',
+    client: 'LEONI',
+    sector: 'Industrie',
+    title: 'Contrôle de gestion industriel et performance de production',
+    context: 'Usine de câblage automobile avec des enjeux d’efficience par projet client.',
+    actions: [
+      'Indicateurs de performance industrielle et efficience par projet',
+      'Analyse des coûts de production',
+      'Contrôle de gestion sociale et reportings SAP',
+    ],
+    result: 'Une lecture de la performance de production projet par projet.',
+  },
+  {
+    slug: 'mission-pme',
+    client: 'JEB Consulting et missions freelance',
+    sector: 'Conseil aux PME',
+    title: 'Tableaux de bord et pilotage pour PME',
+    context: 'Dirigeants de PME sans contrôleur de gestion, qui pilotaient à partir du relevé bancaire.',
+    actions: [
+      'Mise en place de reportings et de tableaux de bord',
+      'Budgets simples et suivi de trésorerie',
+      'Accompagnement des équipes dans la prise en main',
+    ],
+    result: 'Plus de 20 entreprises accompagnées dans leur pilotage financier.',
+  },
+]

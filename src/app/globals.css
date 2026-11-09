@@ -109,3 +109,7 @@ a, button {
     transition: none !important;
   }
 }
+
+html {
+  scroll-padding-top: 80px;
+}

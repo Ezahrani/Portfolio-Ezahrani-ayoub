@@ -7,7 +7,8 @@ import { Menu, X } from 'lucide-react'
 const navItems = [
   { label: 'Expertise', href: '/#expertise' },
   { label: 'Réalisations', href: '/#realisations' },
-  { label: 'Missions', href: '/#offres' },
+  { label: 'Tarifs', href: '/#offres' },
+  { label: 'Missions réalisées', href: '/#missions' },
   { label: 'Parcours', href: '/#parcours' },
   { label: 'Projets mobiles', href: '/projects' },
 ]
@@ -29,9 +30,9 @@ export default function Navigation() {
             </span>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-7">
+          <div className="hidden xl:flex items-center gap-7">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href} className="text-sm text-gray-300 hover:text-white">
+              <Link key={item.href} href={item.href} className="text-sm text-gray-300 hover:text-white whitespace-nowrap">
                 {item.label}
               </Link>
             ))}
@@ -46,7 +47,7 @@ export default function Navigation() {
           <button
             type="button"
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-white"
+            className="xl:hidden text-white"
             aria-label={isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
             aria-expanded={isOpen}
           >
@@ -55,7 +56,7 @@ export default function Navigation() {
         </div>
 
         {isOpen && (
-          <div className="lg:hidden pb-4">
+          <div className="xl:hidden pb-4">
             {[...navItems, { label: 'Me contacter', href: '/#contact' }].map((item) => (
               <Link
                 key={item.href}

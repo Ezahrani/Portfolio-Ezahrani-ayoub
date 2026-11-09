@@ -2,14 +2,15 @@ import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Gallery from '@/components/Gallery'
-import { offres, parcours } from '@/lib/content'
+import { missions, offres, parcours } from '@/lib/content'
+import { asset } from '@/lib/basePath'
 import { ArrowRight, Bot, Check, Linkedin, Mail, MapPin, Smartphone, TrendingUp } from 'lucide-react'
 
 const chiffres = [
   { value: '6 ans', label: 'en contrôle de gestion, industrie, énergie, banque et services' },
   { value: '23 sites', label: 'couverts comme référent Finance sur une migration SAP FI/CO' },
   { value: '600+', label: 'comptes clients enrichis automatiquement via API' },
-  { value: '2 pays', label: 'France et Maroc, en EUR et en MAD' },
+  { value: '20+', label: 'entreprises accompagnées en France et au Maroc' },
 ]
 
 const references = ['GRDF', 'SNOP · groupe FSD', 'CAPS AUTO', 'Dealt', 'LEONI', 'Crédit Agricole du Maroc']
@@ -169,8 +170,13 @@ export default function Home() {
           <SectionTitle
             eyebrow="Missions"
             title="Des forfaits clairs, un livrable à chaque fois"
-            text="Prix indicatifs hors taxes, ajustés après un premier échange selon la taille de l'entreprise et l'état des données."
+            text="Prix indicatifs hors taxes : le prix varie en fonction de la mission."
           />
+          <div className="mb-8 rounded-2xl border border-amber/40 bg-amber/10 px-5 py-4 text-sm text-gray-200 leading-relaxed">
+            <span className="font-bold text-amber">Le prix varie en fonction de la mission :</span> périmètre, taille de
+            l&apos;entreprise, état des données, niveau d&apos;automatisation attendu et délai. Après un premier échange
+            gratuit de 30 minutes, vous recevez un devis précis et sans surprise.
+          </div>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {offres.map((o) => (
               <div key={o.title} className="rounded-2xl border border-line bg-panel p-6 flex flex-col">
@@ -204,6 +210,72 @@ export default function Home() {
               <span key={o} className="px-3 py-1.5 rounded-lg border border-line bg-ink text-sm text-gray-300">
                 {o}
               </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Entreprises accompagnées */}
+      <section id="accompagnement" className="py-16 px-4 md:px-8">
+        <div className="max-w-6xl mx-auto rounded-3xl border border-accent/40 bg-gradient-to-r from-accent/20 via-panel to-coral/10 p-8 md:p-12 grid md:grid-cols-[auto_1fr] gap-8 items-center">
+          <div>
+            <p className="font-display text-7xl md:text-8xl font-extrabold text-white leading-none">20+</p>
+            <p className="text-accent font-semibold mt-2">entreprises accompagnées</p>
+          </div>
+          <div>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-white text-balance">
+              Grands groupes, ETI et PME, en France et au Maroc
+            </h2>
+            <p className="text-gray-300 mt-3 leading-relaxed">
+              Énergie, industrie automobile, services, banque, conseil : des directions financières de groupes de 23 sites
+              aux dirigeants de PME qui pilotaient jusque-là à partir de leur relevé bancaire.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {['Énergie', 'Industrie automobile', 'Industrie', 'Services', 'Banque', 'Conseil aux PME'].map((s) => (
+                <span key={s} className="px-3 py-1 rounded-full text-sm border border-white/20 bg-white/5 text-gray-200">
+                  {s}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Missions réalisées */}
+      <section id="missions" className="py-20 px-4 md:px-8 bg-panel/40 border-y border-line">
+        <div className="max-w-6xl mx-auto">
+          <SectionTitle
+            eyebrow="Missions réalisées"
+            title="Mes principales missions"
+            text="Le contexte, ce que j'ai fait et le résultat, pour quelques-unes des entreprises accompagnées."
+          />
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {missions.map((m) => (
+              <article key={m.slug} className="rounded-2xl border border-line bg-ink overflow-hidden flex flex-col">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={asset(`/portfolio/${m.slug}.webp`)}
+                  alt={`${m.client} : ${m.title}`}
+                  loading="lazy"
+                  className="w-full aspect-[16/10] object-cover"
+                />
+                <div className="p-6 flex flex-col gap-3 flex-1">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-accent">
+                    {m.sector} · {m.client}
+                  </p>
+                  <h3 className="font-display text-xl font-bold text-white leading-snug">{m.title}</h3>
+                  <p className="text-sm text-gray-400 leading-relaxed">{m.context}</p>
+                  <ul className="space-y-1.5">
+                    {m.actions.map((a) => (
+                      <li key={a} className="flex gap-2 text-sm text-gray-300">
+                        <Check size={16} className="text-mint shrink-0 mt-0.5" />
+                        {a}
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-auto pt-4 border-t border-line text-sm font-semibold text-white">{m.result}</p>
+                </div>
+              </article>
             ))}
           </div>
         </div>
