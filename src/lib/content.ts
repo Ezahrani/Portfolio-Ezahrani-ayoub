@@ -41,52 +41,12 @@ export const realisations: Realisation[] = [
     tags: ['Clôture', 'Process', 'Automatisation'],
   },
   {
-    slug: 'orana-budget-2027',
-    title: 'ORANA Agro : budget 2027',
-    description:
-      "Budget 2027 d'un industriel agroalimentaire : CA 360 M MAD, EBE 53,6 M. Passage d'EBE, mix produits, trésorerie, marges par article et saturation des lignes.",
-    category: 'controle',
-    tags: ['Budget', 'Scénarios', 'Trésorerie'],
-  },
-  {
-    slug: 'excel-budget-scenarios',
-    title: 'Modèle budgétaire Excel par scénario',
-    description:
-      'Un clic sur Prudent, Central ou Ambitieux recalcule le compte de résultat, la trésorerie mensuelle et 15 contrôles automatiques OK / alerte / bloquant.',
-    category: 'controle',
-    tags: ['Excel avancé', 'Contrôles', 'Scénarios'],
-  },
-  {
-    slug: 'nova-pl-groupe',
-    title: 'NOVA Groupe : P&L consolidé, réel vs budget',
-    description:
-      "Pilotage d'un groupe de 5 filiales : réel vs budget vs N-1, cascade des écarts d'EBE par filiale et atterrissage du CA 2026 à 196 M€.",
-    category: 'controle',
-    tags: ['Consolidation', 'Écarts', 'Atterrissage'],
-  },
-  {
-    slug: 'excel-flash-mensuel',
-    title: 'Flash mensuel Excel automatisé',
-    description:
-      'Choix de la filiale et du mois dans des listes déroulantes : indicateurs, tableau des filiales, écarts au budget et à N-1 et graphique se recalculent seuls.',
-    category: 'controle',
-    tags: ['Excel', 'Reporting', 'Automatisation'],
-  },
-  {
     slug: 'nova-ecarts-standards',
     title: 'NOVA Industrie : écarts sur coûts standards',
     description:
       'Du coût standard au coût réel : écarts matières, main-d’œuvre et frais généraux, suivi du taux de rebut et articles les plus pénalisants.',
     category: 'controle',
     tags: ['Coûts de revient', 'Industrie', 'Analytique'],
-  },
-  {
-    slug: 'nova-bfr',
-    title: 'NOVA Groupe : BFR et trésorerie',
-    description:
-      "Pilotage du cash : 22,2 M€ d'encours clients, balance âgée, DSO 76 j, stocks dormants et taux de service fournisseurs, avec plan d'action.",
-    category: 'controle',
-    tags: ['BFR', 'Balance âgée', 'Cash'],
   },
   {
     slug: 'helios-energie',
@@ -177,51 +137,6 @@ export const offres = [
   },
 ]
 
-export const parcours = [
-  {
-    period: '2026',
-    company: 'GRDF',
-    role: 'Analyste Data & Performance, support Grands Comptes',
-    text: 'Tableaux de bord Power BI de suivi des consommations, analyses SQL, enrichissement automatisé de plus de 600 comptes clients via les API Sirene.',
-  },
-  {
-    period: '2025 – 2026',
-    company: 'CAPS AUTO',
-    role: 'Contrôleur de gestion & Business Analyst',
-    text: 'Budget et reprévisions, analyse des écarts, rentabilité par activité et par client, tableaux de bord Power BI pour la direction.',
-  },
-  {
-    period: '2025',
-    company: 'Dealt',
-    role: 'Contrôleur de gestion, reporting financier',
-    text: 'Reportings financiers automatisés sous Power BI à partir de SAP, clôtures mensuelles, suivi du CA et de la rentabilité.',
-  },
-  {
-    period: '2023 – 2025',
-    company: 'SNOP, groupe FSD',
-    role: 'Contrôleur de gestion central & SI, référent Finance migration SAP',
-    text: 'Groupe industriel de 23 sites : référent Finance sur la migration SAP FI/CO (recette, tests, formation), reporting réel / budget, calculs de coûts, clôtures.',
-  },
-  {
-    period: '2022 – 2023',
-    company: 'JEB Consulting',
-    role: 'Consultant contrôle de gestion & pilotage',
-    text: 'Mise en place de reportings et de tableaux de bord pour des PME clientes, pilotage de projets de transformation.',
-  },
-  {
-    period: '2021 – 2022',
-    company: 'LEONI',
-    role: 'Contrôleur de gestion industriel',
-    text: 'Indicateurs de performance industrielle, efficience de production par projet, contrôle de gestion sociale, reportings SAP.',
-  },
-  {
-    period: '2021',
-    company: 'Crédit Agricole du Maroc',
-    role: 'Contrôleur de gestion',
-    text: 'Clôtures mensuelles, analyse des écarts réel / budget, suivi des CAPEX, des OPEX et des coûts de personnel.',
-  },
-]
-
 export interface Mission {
   slug: string
   client: string
@@ -300,8 +215,8 @@ export const missions: Mission[] = [
   },
   {
     slug: 'mission-pme',
-    client: 'JEB Consulting et missions freelance',
-    sector: 'Conseil aux PME',
+    client: 'Missions de conseil',
+    sector: 'PME et ETI',
     title: 'Tableaux de bord et pilotage pour PME',
     context: 'Dirigeants de PME sans contrôleur de gestion, qui pilotaient à partir du relevé bancaire.',
     actions: [

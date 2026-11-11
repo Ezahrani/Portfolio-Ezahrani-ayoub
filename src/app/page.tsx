@@ -1,19 +1,30 @@
-import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Gallery from '@/components/Gallery'
-import { missions, offres, parcours } from '@/lib/content'
+import { missions, offres } from '@/lib/content'
 import { asset } from '@/lib/basePath'
-import { ArrowRight, Bot, Check, Linkedin, Mail, MapPin, Smartphone, TrendingUp } from 'lucide-react'
+import { ArrowRight, Award, Bot, Check, Linkedin, Mail, MapPin, TrendingUp } from 'lucide-react'
 
 const chiffres = [
-  { value: '6 ans', label: 'en contrôle de gestion, industrie, énergie, banque et services' },
+  { value: '6 ans', label: "d'expertise en contrôle de gestion, énergie, industrie, banque et services" },
   { value: '23 sites', label: 'couverts comme référent Finance sur une migration SAP FI/CO' },
   { value: '600+', label: 'comptes clients enrichis automatiquement via API' },
-  { value: '20+', label: 'entreprises accompagnées en France et au Maroc' },
+  { value: '20+', label: 'entreprises accompagnées, des PME aux grands groupes' },
 ]
 
-const references = ['GRDF', 'SNOP · groupe FSD', 'CAPS AUTO', 'Dealt', 'LEONI', 'Crédit Agricole du Maroc']
+const references = [
+  { name: 'GRDF', logo: '/logos/grdf.svg', sector: 'Énergie' },
+  { name: 'SNOP · groupe FSD', logo: '/logos/groupe-fsd.jpg', sector: 'Industrie automobile' },
+  { name: 'CAPS AUTO', logo: '/logos/caps-auto.png', sector: 'Services automobile' },
+  { name: 'Dealt', logo: '/logos/dealt.svg', sector: 'Services' },
+  { name: 'LEONI', logo: '/logos/leoni.svg', sector: 'Industrie' },
+]
+
+const certifications = [
+  { code: 'PL-300', name: 'Microsoft Power BI Data Analyst', org: 'Microsoft' },
+  { code: 'PL-600', name: 'Microsoft Power Platform Solution Architect', org: 'Microsoft' },
+  { code: 'SAP FI-CO', name: 'SAP Finance & Controlling', org: 'SAP' },
+]
 
 const controle = [
   'Budget, forecast et reprévisions par scénario',
@@ -69,8 +80,9 @@ export default function Home() {
             Des chiffres fiables. <span className="text-gradient">Des reportings qui se font seuls.</span>
           </h1>
           <p className="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">
-            Je suis Ayoub Ezahrani, contrôleur de gestion freelance et développeur. Je pilote votre performance financière
-            (budget, clôtures, analyse des écarts, Power BI) et j&apos;automatise ce qui peut l&apos;être, jusqu&apos;aux agents IA.
+            CodeFin est un cabinet de conseil en contrôle de gestion, data et automatisation. Nous pilotons votre
+            performance financière (budget, clôtures, analyse des écarts, Power BI) et nous automatisons ce qui peut
+            l&apos;être, jusqu&apos;aux agents IA.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
@@ -96,14 +108,6 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-500">
-            <span className="uppercase tracking-widest text-xs">Ils m&apos;ont fait confiance</span>
-            {references.map((r) => (
-              <span key={r} className="font-semibold text-gray-300">
-                {r}
-              </span>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -112,8 +116,8 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <SectionTitle
             eyebrow="Expertise"
-            title="Deux métiers rarement réunis chez la même personne"
-            text="Je comprends vos enjeux financiers et je construis les outils qui font le travail répétitif à la place de vos équipes."
+            title="Deux expertises réunies dans un même cabinet"
+            text="Nous comprenons vos enjeux financiers et nous construisons les outils qui font le travail répétitif à la place de vos équipes."
           />
           <div className="grid md:grid-cols-2 gap-6">
             <div className="rounded-3xl border border-line bg-panel p-7">
@@ -157,7 +161,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <SectionTitle
             eyebrow="Réalisations"
-            title="Ce que je livre, sur des cas d'entreprise"
+            title="Ce que nous livrons, sur des cas d'entreprise"
             text="Agents IA, automatisations, modèles budgétaires et rapports Power BI. Les cas d'étude reposent sur des entreprises et des données fictives, construites pour être cohérentes de bout en bout."
           />
           <Gallery />
@@ -224,7 +228,7 @@ export default function Home() {
           </div>
           <div>
             <h2 className="font-display text-2xl md:text-3xl font-bold text-white text-balance">
-              Grands groupes, ETI et PME, en France et au Maroc
+              Grands groupes, ETI et PME
             </h2>
             <p className="text-gray-300 mt-3 leading-relaxed">
               Énergie, industrie automobile, services, banque, conseil : des directions financières de groupes de 23 sites
@@ -241,13 +245,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Ils nous font confiance */}
+      <section id="references" className="pb-16 px-4 md:px-8">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-center text-xs font-semibold uppercase tracking-[0.18em] text-gray-400 mb-6">
+            Ils nous font confiance
+          </p>
+          <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+            {references.map((r) => (
+              <li key={r.name} className="rounded-2xl bg-white p-5 flex flex-col items-center justify-center gap-3 h-36">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={asset(r.logo)} alt={`Logo ${r.name}`} className="max-h-14 max-w-[85%] object-contain" />
+                <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-500">{r.sector}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       {/* Missions réalisées */}
       <section id="missions" className="py-20 px-4 md:px-8 bg-panel/40 border-y border-line">
         <div className="max-w-6xl mx-auto">
           <SectionTitle
             eyebrow="Missions réalisées"
-            title="Mes principales missions"
-            text="Le contexte, ce que j'ai fait et le résultat, pour quelques-unes des entreprises accompagnées."
+            title="Nos principales missions"
+            text="Le contexte, ce que nous avons fait et le résultat, pour quelques-unes des entreprises accompagnées."
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {missions.map((m) => (
@@ -281,58 +303,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Parcours */}
-      <section id="parcours" className="py-20 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-[1fr_2fr] gap-10">
-          <div>
-            <SectionTitle eyebrow="Parcours" title="Énergie, industrie, banque, services" />
-            <div className="rounded-2xl border border-line bg-panel p-6 text-sm text-gray-300 space-y-3">
-              <p className="font-semibold text-white">Formation</p>
-              <p>
-                Master Contrôle de gestion & Systèmes d&apos;information
-                <br />
-                <span className="text-gray-500">Brest Business School</span>
-              </p>
-              <p>
-                Master Gestion financière et comptable
-                <br />
-                <span className="text-gray-500">ENCG Settat</span>
-              </p>
-            </div>
-          </div>
-          <ol className="relative border-l border-line ml-2 space-y-8">
-            {parcours.map((p) => (
-              <li key={p.company + p.period} className="pl-7 relative">
-                <span className="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-accent ring-4 ring-ink" />
-                <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">{p.period}</p>
-                <p className="font-display text-xl font-bold text-white mt-1">{p.company}</p>
-                <p className="text-accent text-sm font-semibold">{p.role}</p>
-                <p className="text-gray-400 text-sm mt-2 leading-relaxed">{p.text}</p>
-              </li>
+      {/* Certifications */}
+      <section id="certifications" className="py-20 px-4 md:px-8">
+        <div className="max-w-6xl mx-auto">
+          <SectionTitle eyebrow="Certifications" title="Certifications sur les outils du marché" />
+          <div className="grid gap-5 sm:grid-cols-3">
+            {certifications.map((c) => (
+              <div key={c.code} className="rounded-2xl border border-line bg-panel p-6 flex gap-4 items-start">
+                <span className="w-12 h-12 shrink-0 rounded-xl bg-accent/15 text-accent grid place-items-center">
+                  <Award size={24} />
+                </span>
+                <div>
+                  <p className="font-display text-2xl font-extrabold text-white">{c.code}</p>
+                  <p className="text-gray-300 text-sm mt-1">{c.name}</p>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-accent mt-3">{c.org} · en cours</p>
+                </div>
+              </div>
             ))}
-          </ol>
-        </div>
-      </section>
-
-      {/* Développement */}
-      <section id="developpement" className="py-16 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto rounded-3xl border border-line bg-gradient-to-r from-panel to-ink p-8 md:p-10 grid md:grid-cols-[auto_1fr_auto] gap-6 items-center">
-          <span className="w-14 h-14 rounded-2xl bg-mint/15 text-mint grid place-items-center">
-            <Smartphone size={28} />
-          </span>
-          <div>
-            <h2 className="font-display text-2xl font-bold text-white">Aussi développeur d&apos;applications</h2>
-            <p className="text-gray-400 mt-2 leading-relaxed">
-              Créateur de Match&amp;Move, application de mise en relation sportive disponible sur iOS et Android
-              (Flutter, Firebase). C&apos;est ce qui me permet de construire moi-même vos automatisations et vos agents IA.
-            </p>
           </div>
-          <Link
-            href="/projects"
-            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-line text-white font-semibold hover:border-mint whitespace-nowrap"
-          >
-            Projets mobiles <ArrowRight size={18} />
-          </Link>
         </div>
       </section>
 
@@ -344,7 +332,7 @@ export default function Home() {
             Un budget à monter, un reporting à automatiser ?
           </h2>
           <p className="text-gray-400 text-lg mt-4 max-w-2xl mx-auto">
-            Envoyez-moi deux lignes sur votre contexte : taille, outils, échéance. Je vous réponds sous 24 h avec une
+            Envoyez-nous deux lignes sur votre contexte : taille, outils, échéance. Nous vous répondons sous 24 h avec une
             proposition de cadrage et un prix.
           </p>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
@@ -376,8 +364,8 @@ export default function Home() {
             </a>
             <div className="rounded-2xl border border-line bg-panel p-5">
               <MapPin className="text-accent" size={22} />
-              <p className="text-white font-semibold mt-3">Basé à Colombes</p>
-              <p className="text-gray-400 text-sm">Île-de-France · sur site, hybride ou à distance</p>
+              <p className="text-white font-semibold mt-3">Île-de-France</p>
+              <p className="text-gray-400 text-sm">Sur site, hybride ou à distance</p>
             </div>
           </div>
         </div>

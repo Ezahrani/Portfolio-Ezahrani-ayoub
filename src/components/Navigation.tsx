@@ -9,8 +9,8 @@ const navItems = [
   { label: 'Réalisations', href: '/#realisations' },
   { label: 'Tarifs', href: '/#offres' },
   { label: 'Missions réalisées', href: '/#missions' },
-  { label: 'Parcours', href: '/#parcours' },
-  { label: 'Projets mobiles', href: '/projects' },
+  { label: 'Références', href: '/#references' },
+  { label: 'Certifications', href: '/#certifications' },
 ]
 
 export default function Navigation() {
@@ -26,7 +26,7 @@ export default function Navigation() {
             </span>
             <span className="leading-tight">
               <span className="block font-display font-bold text-white">CodeFin</span>
-              <span className="block text-[11px] text-gray-400">Ayoub Ezahrani · Contrôle de gestion & IA</span>
+              <span className="block text-[11px] text-gray-400">Conseil en contrôle de gestion & IA</span>
             </span>
           </Link>
 
@@ -40,7 +40,7 @@ export default function Navigation() {
               href="/#contact"
               className="text-sm font-bold px-4 py-2 rounded-lg bg-accent text-ink hover:bg-white"
             >
-              Me contacter
+              Nous contacter
             </Link>
           </div>
 
@@ -57,7 +57,7 @@ export default function Navigation() {
 
         {isOpen && (
           <div className="xl:hidden pb-4">
-            {[...navItems, { label: 'Me contacter', href: '/#contact' }].map((item) => (
+            {[...navItems, { label: 'Nous contacter', href: '/#contact' }].map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
