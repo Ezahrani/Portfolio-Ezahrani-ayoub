@@ -1,6 +1,7 @@
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Gallery from '@/components/Gallery'
+import Services from '@/components/Services'
 import { missions, offres } from '@/lib/content'
 import { asset } from '@/lib/basePath'
 import { ArrowRight, Award, Bot, Check, Linkedin, Mail, MapPin, TrendingUp } from 'lucide-react'
@@ -156,8 +157,20 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Services */}
+      <section id="services" className="py-20 px-4 md:px-8 bg-panel/40 border-y border-line">
+        <div className="max-w-6xl mx-auto">
+          <SectionTitle
+            eyebrow="Ce que nous vous offrons"
+            title="Toute la fonction contrôle de gestion, de la clôture à l'automatisation"
+            text="Nous intervenons sur une tâche précise ou sur l'ensemble de votre fonction finance, en mission ponctuelle ou dans la durée."
+          />
+          <Services />
+        </div>
+      </section>
+
       {/* Réalisations */}
-      <section id="realisations" className="py-20 px-4 md:px-8 bg-panel/40 border-y border-line">
+      <section id="realisations" className="py-20 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <SectionTitle
             eyebrow="Réalisations"

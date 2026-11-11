@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 
 const navItems = [
-  { label: 'Expertise', href: '/#expertise' },
+  { label: 'Services', href: '/#services' },
   { label: 'Réalisations', href: '/#realisations' },
   { label: 'Tarifs', href: '/#offres' },
   { label: 'Missions réalisées', href: '/#missions' },
