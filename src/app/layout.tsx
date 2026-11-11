@@ -37,6 +37,11 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-ink">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var q=new URLSearchParams(location.search);var r=q.get('r')||'';try{if(r){sessionStorage.setItem('cf_r',r)}else{r=sessionStorage.getItem('cf_r')||''}}catch(e){}var i=new Image();i.src='/t.php?e=v&r='+encodeURIComponent(r)+'&p='+encodeURIComponent(location.pathname+location.hash)+'&from='+encodeURIComponent(document.referrer.split('?')[0]);}catch(e){}})();`,
+          }}
+        />
         {children}
       </body>
     </html>
