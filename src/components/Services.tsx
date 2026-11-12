@@ -1,6 +1,7 @@
 import {
   ArrowLeftRight,
   BarChart3,
+  Building2,
   Calculator,
   Check,
   FileSpreadsheet,
@@ -71,6 +72,20 @@ const services: Service[] = [
     ],
   },
   {
+    icon: Building2,
+    title: 'Accompagnement des repreneurs',
+    intro: 'Vous reprenez une TPE ou une PME : sécuriser les chiffres avant de faire une offre.',
+    tasks: [
+      'Crash-test financier des dossiers de cession',
+      'EBE retraité, free cash-flow et BFR réels',
+      'Valorisation indicative de la cible',
+      'Capacité d’emprunt et montage via une holding',
+      'Plan de financement : apport, banque, prêts d’honneur, Bpifrance',
+      'Synthèse « go / no go » et modèle Excel réutilisable',
+      'Appui sur la due diligence financière',
+    ],
+  },
+  {
     icon: RefreshCw,
     title: 'Transformation de la fonction finance',
     intro: 'Moins de saisie, plus d’analyse.',
@@ -120,7 +135,7 @@ const services: Service[] = [
 
 export default function Services() {
   return (
-    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {services.map((s) => (
         <article key={s.title} className="rounded-2xl border border-line bg-panel p-6 flex flex-col">
           <span className="w-11 h-11 rounded-xl bg-accent/15 text-accent grid place-items-center">
