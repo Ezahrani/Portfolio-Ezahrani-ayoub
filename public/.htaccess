@@ -1,0 +1,5 @@
+RewriteEngine On
+# Redirige toutes les visites http vers https (en gardant ?r= et les autres paramètres)
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
